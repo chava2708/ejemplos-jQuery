@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.1.1.min.js"></script>    
+    <!--<script src="holajQuery.js"></script>-->
+    <script>
+
+        // $(function(){
+        //   $('#boton1').click(function () {               
+        //       alert('hola' + $(this).text())
+        //   })
+        // })
+
+        // $(function(){
+        //     $('.boton').on('click',function(){
+        //         alert('Hola' + $(this).text())
+        //     })
+        // })
+
+        $(function(){
+            $('button').on('click',{
+                propiedad1 : 'valor1',
+                propiedad2 : 'valor2',
+            }, function(e){
+                alert(e.data.propiedad1);
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>Hola jQuery</h1>
+    <p class="parrafo">Parrafo 1</p>
+
+    <button class="boton">  Boton1  </button>
+    
+    <h2>Encabezado 2</h2>
+    <p class="parrafo">Parrafo 2</p>
+    <button class="boton">  Boton2  </button>
+
+    <h2>Encabezado 3</h2>
+    <p id="parrafo3">Parrafo 3</p>
+    <button>  Boton3  </button>
+
+    <script>
+        jQuery('*:last').text('Modificado desde jQuery')
+    </script>    
+    
+</body>
+</html>
